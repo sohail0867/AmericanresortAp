@@ -16,8 +16,6 @@
 </script>
 <script type="text/javascript" src="Controllers/controller.js"></script>
 	 
-
-
 <style>
 
 form-control{
@@ -32,7 +30,6 @@ form-control{
 
 
 </style>
-
 	 
 </head>
 <body ng-app='myApp'>
@@ -53,10 +50,11 @@ form-control{
                     </ul>
                 </div><!-- /.navbar-collapse -->
             </nav>
-	
-<h1>Customer Info Form</h1>
+
+<h1>Customer Detail Form</h1>
 
 <div class="container" >
+<input class="form-control" ng-model='contact.Id'>
 
 <input class="form-control" ng-model='contact.firstname'>
 
@@ -76,7 +74,7 @@ form-control{
 <input class="form-control" ng-model='contact.zip'>
 	
 
-<button  class="btn btn-primary" ng-click="addcontact()">Add</button></td>
+<button  class="btn btn-primary" ng-click="addcontact1()">Add</button></td>
 
 
 </div>
@@ -91,7 +89,7 @@ form-control{
 	<th>City</th>
 	<th>State/Province</th>
      <th>ZIP</th>
-	<th>Action</th>
+	<th>ID</th>
 
 </tr>
 
@@ -123,6 +121,9 @@ form-control{
 </td>
 <td>
 {{contact.zip}}
+</td>
+<td>
+{{contact.Id}}
 </td>
 </tr>
 

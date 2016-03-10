@@ -11,6 +11,10 @@ $http.get('/contactlist').success(function(response){
 });
 };
 
+
+
+
+
 refresh();
 $scope.addcontact=function()
 {
@@ -24,5 +28,35 @@ $http.post('/contactlist',$scope.contact).success(function(response)
 });
 
 };
+
+$scope.addcontact1=function()
+{
+console.log($scope.contact);
+$http.post('/Detail',$scope.contact).success(function(response)
+
+{
+
+	console.log(response);
+	refresh1();
+});
+
+};
+
+$scope.addcontact2=function()
+{
+console.log($scope.Notes);
+$scope.Notes.Date=new Date();
+
+$http.post('/Notes',$scope.Notes).success(function(response)
+{
+
+	console.log(response);
+	refresh1();
+});
+
+};
+
+
+
 
 });
